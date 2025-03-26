@@ -1,0 +1,317 @@
+:root {
+  --dark-color: #07152a;
+  --green-color: #10bc4f;
+  --red-color: #ff3150;
+  --yellow-color: #ffcc22;
+  --section-color: #f8f6ed;
+  --transition: 0.5s ease-in;
+  --social-media-transform: rotate(360deg) scale(1.3);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  min-height: 100vh;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Start constants */
+a {
+  text-decoration: none;
+}
+.main-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: var(--dark-color);
+  font-family: 'Lalezar', system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.main-title::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  background-color: var(--yellow-color);
+  bottom: -30px;
+  width: 160px;
+  margin-bottom: 20px;
+}
+.main-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: white;
+  bottom: -36px;
+  margin-bottom: 20px;
+}
+.about-btn {
+  background-color: var(--dark-color);
+  border: 1px solid rgb(113, 111, 111);
+  border-radius: 5px;
+  color: white;
+  padding: 7px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 1px 5px 15px black;
+  transition: var(--transition);
+}
+.about-btn:hover {
+  color: white;
+  background-color: var(--dark-color);
+  transform: translateY(10px) scale(1.1);
+  box-shadow: none;
+}
+/* End constants */
+
+/* start navbar */
+.navbar {
+  background-color: var(--green-color);
+}
+.navbar .logo {
+  border-right: 1px solid white;
+  padding-left: 20px;
+  margin-right: 10px;
+}
+.navbar img {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar .navbar-toggler {
+  font-size: 30px;
+  color: #eff7fa;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .links > li > a {
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navbar .links > li > a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  top: 0;
+  right: 100%;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.navbar .links > li > a:hover::before {
+  right: 0%;
+}
+.navbar .social-links {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.navbar .facebook-icon {
+  color: #1877f2;
+  transition: var(--transition);
+}
+.navbar .facebook-icon:hover {
+  transform: var(--social-media-transform);
+  border: 1px solid #ffffff;
+}
+.navbar .instagram-icon {
+  color: #c13584;
+  transition: var(--transition);
+}
+.navbar .instagram-icon:hover {
+  transform: var(--social-media-transform);
+  border: 1px solid #ffffff;
+}
+.navbar .youtube-icon {
+  color: #ff0000;
+  transition: var(--transition);
+}
+.navbar .youtube-icon:hover {
+  transform: var(--social-media-transform);
+  border: 1px solid #ffffff;
+}
+
+/* End navbar */
+/* Start Landing */
+.landing #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.landing .container .content .info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.landing .Title-text {
+  font-size: 100px;
+  color: rgb(196, 91, 47);
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Lalezar', system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.landing .Slogan {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 20px;
+  font-family: 'Lalezar', system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+/* End landing */
+/* start about-service  */
+.services svg {
+  color: white;
+}
+
+.services .srv-text {
+  color: var(--dark-color);
+}
+/* End about-service  */
+
+/* Start grades */
+.grades {
+  background-color: white;
+  background-size: auto;
+}
+
+.grades .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.grades .box {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px 0px #000000ab;
+  transition: 0.5s;
+}
+.grades .box:hover {
+  transform: perspective(800px) rotateY(15deg) scale(1) rotateX(10deg);
+  box-shadow: -20px 0px 20px 0px #000000ab;
+  border-right: 2px solid rgb(167, 167, 167);
+  border-bottom: 2px solid rgb(155, 155, 155);
+}
+.grades .box img {
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+.grades .box:hover img {
+  filter: none;
+}
+.grades .box .soon {
+  filter: brightness(0);
+  transition: 0.5s;
+}
+.grades .box:hover .soon {
+  filter: none;
+}
+.grades .box .more-btn a {
+  color: var(--green-color);
+}
+.grades .box:hover a {
+  color: #ff3150;
+}
+
+/* End grades */
+/* Start courses */
+.courses {
+  background-color: white;
+  background-size: auto;
+}
+
+.courses .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+.courses .box {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px 0px #000000ab;
+  transition: 0.5s;
+}
+.grades .box:hover {
+  transform: perspective(800px) rotateY(15deg) scale(1) rotateX(10deg);
+  box-shadow: -20px 0px 20px 0px #000000ab;
+  border-right: 2px solid rgb(167, 167, 167);
+  border-bottom: 2px solid rgb(155, 155, 155);
+}
+.grades .box img {
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+.grades .box:hover img {
+  filter: none;
+}
+.grades .box .soon {
+  filter: brightness(0);
+  transition: 0.5s;
+}
+.grades .box:hover .soon {
+  filter: none;
+}
+.grades .box .more-btn a {
+  color: var(--green-color);
+}
+.grades .box:hover a {
+  color: #ff3150;
+}
+.grades .box:hover .more-btn svg {
+  color: #ff3150;
+}
+.grades .box .more-btn svg {
+  color: var(--green-color);
+}
+/* End grades */
+/* Srart Blog */
+.blog {
+  background-color: var(--section-color);
+}
+.blog .blog-info span {
+  color: var(--red-color);
+}
+/* End Blog */
+/* Start Footer */
+.footer {
+  background-color: var(--dark-color);
+}
+.footer .links a {
+  color: var(--yellow-color);
+}
+.footer .info span {
+  color: var(--yellow-color);
+}
+
+/* End Footer */

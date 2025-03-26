@@ -1,0 +1,129 @@
+/* start navbar */
+@media (max-width: 991px) {
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 991px) {
+  .navbar .logo img {
+    border: none;
+    display: flex;
+  }
+}
+@media (max-width: 991px) {
+  .navbar .logo {
+    border: none;
+    display: none;
+  }
+}
+@media (max-width: 678px) {
+  .navbar .links > li > a::before {
+    display: none;
+  }
+}
+.navbar .social-links > li > a {
+  padding-left: 15px;
+}
+@media (max-width: 678px) {
+  .navbar .social-links li {
+    display: none;
+  }
+}
+/* End navbar */
+
+/* Start Landing */
+@media (min-width: 991px) {
+  .landing h1 span:hover {
+    font-size: 70px;
+    color: var(--yellow-color);
+  }
+}
+@media (max-width: 600px) {
+  .landing h1 {
+    padding: 30px 10px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 600px) {
+  .landing a {
+    margin: 20px 10px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 600px) {
+  .landing ul {
+    font-size: 15px;
+  }
+}
+/* End landing */
+
+/* start about-service  */
+@media (min-width: 991px) {
+  .services svg:hover {
+    color: var(--yellow-color);
+  }
+}
+/* End about-service  */
+
+/* Start Skills */
+@media (max-width: 991px) {
+  .our-skills img {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .our-skills .skills-about-btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+}
+/* End Skills */
+
+/* Start Projects */
+@media (max-width: 991px) {
+  .projects {
+    background: none;
+  }
+}
+/* End Projects */
+
+/* Start Footer */
+@media (max-width: 768px) {
+  .footer-image {
+    display: none;
+  }
+}
+
+/*About File*/
+/* Start constants*/
+@media (max-width: 678px) {
+  .about-main-title {
+    width: 80%;
+    text-align: center;
+    margin: 30px;
+    padding: 10px;
+  }
+}
+/* End constants */
+
+/* Start Landing */
+@media (max-width: 678px) {
+  .about-landing .container .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .about-landing h1 {
+    padding: 30px 10px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+/* End landing */
